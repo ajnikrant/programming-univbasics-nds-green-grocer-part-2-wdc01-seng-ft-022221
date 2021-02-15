@@ -62,8 +62,8 @@ def checkout(cart, coupons)
 
   if grand_total> 100
     grand_total * 0.9
-  return  grand_total
+  return  grand_total.Float
   end
 
-  grand_total
+  grand_total.Float
 end
