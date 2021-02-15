@@ -56,7 +56,7 @@ def checkout(cart, coupons)
   grand_total = 0
 
   while counter < final_cart
-    grand_total << clearanced_cart[counter][:price]
+    final_cart[counter][:price] + grand_total
     counter +=1
   end
   grand_total.sum
