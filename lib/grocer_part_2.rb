@@ -53,7 +53,7 @@ def checkout(cart, coupons)
   consolidated_cart= consolidate_cart(cart)
   couponed_cart = apply_coupons(consolidate_cart)
   clearanced_cart = apply_clearance(couponed_cart)
-
+  binding.pry
   grand_total = []
 
   while counter < clearanced_cart
