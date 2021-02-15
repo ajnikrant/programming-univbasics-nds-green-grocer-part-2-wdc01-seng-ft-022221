@@ -28,18 +28,15 @@ end
 
 def apply_clearance(cart)
   counter =0
-  cart_item = find_item_by_name_in_collection(coupons[counter][:item], cart)
   while counter < cart.length
-    if cart_item
-      if cart[counter][:clearance] == true
-        clearanced_item = {
-          :item => cart[counter][:item],
-          :price => cart[counter][:price] * 0.8,
-          :clearance => cart[counter][:clearance],
-          :count => cart[counter][:count]
-        }
-        cart << clearanced_item
-      end
+    if cart[counter][:clearance] == true
+      clearanced_item = {
+        :item => cart[counter][:item],
+        :price => cart[counter][:price] * 0.8,
+        :clearance => cart[counter][:clearance],
+        :count => cart[counter][:count]
+      }
+      cart << clearanced_item
     end
     counter +=1
   end
