@@ -29,7 +29,7 @@ end
 def apply_clearance(cart)
   counter =0
   clearance_cart = []
-  
+
   while counter < cart.length
     if cart[counter][:clearance] == true
       clearanced_item = {
@@ -39,7 +39,7 @@ def apply_clearance(cart)
         :count => cart[counter][:count]
       }
       clearance_cart << clearanced_item
-    else 
+    else
       clearance_cart << cart[counter]
     end
     counter +=1
