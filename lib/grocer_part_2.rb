@@ -56,8 +56,14 @@ def checkout(cart, coupons)
   grand_total = []
 
   while counter < clearanced_cart
-    binding.pry
+    grand_total << clearanced_cart[counter][:price]
     counter +=1
   end
+  grand_total.sum
 
+  if grand_total.sum > 100
+    grand_total.sum * 0.9
+  end
+
+  grand_total
 end
